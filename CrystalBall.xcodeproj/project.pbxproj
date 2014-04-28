@@ -112,8 +112,6 @@
 		A3AA0217190D2EF3003B3277 /* CrystalBall */ = {
 			isa = PBXGroup;
 			children = (
-				A3AA0220190D2EF3003B3277 /* LSAppDelegate.h */,
-				A3AA0221190D2EF3003B3277 /* LSAppDelegate.m */,
 				A3AA0223190D2EF3003B3277 /* Main.storyboard */,
 				A3AA0226190D2EF3003B3277 /* LSViewController.h */,
 				A3AA0227190D2EF3003B3277 /* LSViewController.m */,
@@ -126,6 +124,8 @@
 		A3AA0218190D2EF3003B3277 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A3AA0220190D2EF3003B3277 /* LSAppDelegate.h */,
+				A3AA0221190D2EF3003B3277 /* LSAppDelegate.m */,
 				A3AA0219190D2EF3003B3277 /* CrystalBall-Info.plist */,
 				A3AA021A190D2EF3003B3277 /* InfoPlist.strings */,
 				A3AA021D190D2EF3003B3277 /* main.m */,

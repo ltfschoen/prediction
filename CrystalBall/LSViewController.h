@@ -10,4 +10,14 @@
 
 @interface LSViewController : UIViewController
 
+// reference and connect to outlet in IB
+// verify control connected in gutter
+@property (strong, nonatomic) IBOutlet UILabel *predictionLabel;
+
+// add property so have getter setter access in all methods (avoid scope issues)
+@property (strong, nonatomic) NSArray *predictions;
+
+// verify control connected in gutter
+- (IBAction)buttonPressed;
+
 @end
