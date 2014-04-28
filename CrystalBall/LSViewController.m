@@ -56,6 +56,9 @@
 
 - (IBAction)buttonPressed {
     
+    // create local random variable and assign length of array
+    int random = arc4random_uniform(self.predictions.count);
+    
     // create variable called NSArray of predictions
     // allocate in memory and init with data Strings
     
@@ -73,7 +76,8 @@
     // send it message objectAtIndex
     // so when click button it will set to index 0
     // updated to refer to the property of predictions (not the instance variable itself, so change to 'self. '
-    self.predictionLabel.text = [self.predictions objectAtIndex:1];
+    // pass the generated random number
+    self.predictionLabel.text = [self.predictions objectAtIndex:random];
 
 }
 @end
