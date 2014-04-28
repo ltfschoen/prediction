@@ -12,7 +12,7 @@
 @interface LSCrystalBall : NSObject
 
 // create an Array Property for Crystal Ball class
-@property (strong, nonatomic) NSArray *predictions;
+@property (strong, nonatomic, readonly) NSArray *predictions;
 
 // create instance method to return string object
 // name of method randomPrediction
