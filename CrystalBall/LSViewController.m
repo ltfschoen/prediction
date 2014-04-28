@@ -8,6 +8,9 @@
 
 #import "LSViewController.h"
 
+// import as only forward declaration used in header
+#import "LSCrystalBall.h"
+
 @interface LSViewController ()
 
 @end
@@ -42,10 +45,15 @@
      self.predictionLabel.frame = CGRectMake(frame.origin.x, 170, frame.size.width, frame.size.height);
     
      // COPY OF DATA MOVED TO 'MODEL' CLASS LSCRYSTALBALL
-     self.predictions = [[NSArray alloc] initWithObjects:
-                         @"It is certain",
-                         @"It is decidedly certain",
-                         @"It is doubtful", nil];
+     //self.predictions = [[NSArray alloc] initWithObjects:
+     //    @"It is certain",
+     //    @"It is decidedly certain",
+     //    @"It is doubtful", nil];
+    // REPLACE self.predictions declaration with below (as we deleted that property and moved data to model)
+    
+    // alloc and init the crystalBall property
+    // import LSCrystalBall as we only used forward declaration
+    self.crystalBall = [[LSCrystalBall alloc] init];
     
 }
 
@@ -58,7 +66,8 @@
 - (IBAction)buttonPressed {
     
     // create local random variable and assign length of array
-    int random = arc4random_uniform(self.predictions.count);
+    // DELETE AS MOVED TO 'MODEL'
+    //int random = arc4random_uniform(self.predictions.count);
     
     // create variable called NSArray of predictions
     // allocate in memory and init with data Strings
@@ -78,7 +87,10 @@
     // so when click button it will set to index 0
     // updated to refer to the property of predictions (not the instance variable itself, so change to 'self. '
     // pass the generated random number
-    self.predictionLabel.text = [self.predictions objectAtIndex:random];
+    //REPLACE BELOW SINCE 'MODEL' CLASS CREATED FOR DATA
+    //self.predictionLabel.text = [self.predictions objectAtIndex:random];
+    // assign to crystalBall property and assign it to the randomPrediction message
+    self.predictionLabel.text = [self.crystalBall randomPrediction];
 
 }
 @end
