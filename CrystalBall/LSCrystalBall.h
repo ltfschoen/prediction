@@ -9,7 +9,13 @@
 #import <Foundation/Foundation.h>
 
 // purpose is to create a random prediction
-@interface LSCrystalBall : NSObject
+@interface LSCrystalBall : NSObject {
+    /* manually create instance variable as compiler no longer 
+     creates it behind the scenes since 'readonly'
+     property added to 'predictions'
+    */
+    NSArray *_predictions;
+}
 
 // create an Array Property for Crystal Ball class
 @property (strong, nonatomic, readonly) NSArray *predictions;
