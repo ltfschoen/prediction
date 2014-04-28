@@ -21,6 +21,7 @@
 		A3AA0233190D2EF3003B3277 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3AA0215190D2EF3003B3277 /* UIKit.framework */; };
 		A3AA023B190D2EF3003B3277 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A3AA0239190D2EF3003B3277 /* InfoPlist.strings */; };
 		A3AA023D190D2EF3003B3277 /* CrystalBallTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A3AA023C190D2EF3003B3277 /* CrystalBallTests.m */; };
+		A3AA0248190E0C58003B3277 /* LSCrystalBall.m in Sources */ = {isa = PBXBuildFile; fileRef = A3AA0247190E0C58003B3277 /* LSCrystalBall.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		A3AA0238190D2EF3003B3277 /* CrystalBallTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CrystalBallTests-Info.plist"; sourceTree = "<group>"; };
 		A3AA023A190D2EF3003B3277 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A3AA023C190D2EF3003B3277 /* CrystalBallTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CrystalBallTests.m; sourceTree = "<group>"; };
+		A3AA0246190E0C58003B3277 /* LSCrystalBall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSCrystalBall.h; sourceTree = "<group>"; };
+		A3AA0247190E0C58003B3277 /* LSCrystalBall.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSCrystalBall.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +120,8 @@
 				A3AA0227190D2EF3003B3277 /* LSViewController.m */,
 				A3AA0229190D2EF3003B3277 /* Images.xcassets */,
 				A3AA0218190D2EF3003B3277 /* Supporting Files */,
+				A3AA0246190E0C58003B3277 /* LSCrystalBall.h */,
+				A3AA0247190E0C58003B3277 /* LSCrystalBall.m */,
 			);
 			path = CrystalBall;
 			sourceTree = "<group>";
@@ -252,6 +257,7 @@
 			files = (
 				A3AA021E190D2EF3003B3277 /* main.m in Sources */,
 				A3AA0222190D2EF3003B3277 /* LSAppDelegate.m in Sources */,
+				A3AA0248190E0C58003B3277 /* LSCrystalBall.m in Sources */,
 				A3AA0228190D2EF3003B3277 /* LSViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

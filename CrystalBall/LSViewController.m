@@ -41,6 +41,7 @@
     // only changing Y of predictionLabel but other dims stay in tact
      self.predictionLabel.frame = CGRectMake(frame.origin.x, 170, frame.size.width, frame.size.height);
     
+     // COPY OF DATA MOVED TO 'MODEL' CLASS LSCRYSTALBALL
      self.predictions = [[NSArray alloc] initWithObjects:
                          @"It is certain",
                          @"It is decidedly certain",
