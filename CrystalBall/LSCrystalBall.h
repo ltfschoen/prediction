@@ -10,7 +10,7 @@
 
 // purpose is to create a random prediction
 @interface LSCrystalBall : NSObject {
-    /* manually create instance variable as compiler no longer 
+    /* manually create instance variable as compiler no longer
      creates it behind the scenes since 'readonly'
      property added to 'predictions'
     */

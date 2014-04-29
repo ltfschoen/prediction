@@ -13,30 +13,51 @@
                         <viewControllerLayoutGuide type="bottom" id="7VW-bD-28d"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="It is decidely so" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="caR-WR-20I">
-                                <rect key="frame" x="13" y="96" width="280" height="126"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="uDV-gh-tMq" userLabel="Image View - background">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="It is decidely so" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="244" translatesAutoresizingMaskIntoConstraints="NO" id="caR-WR-20I">
+                                <rect key="frame" x="38" y="145" width="244" height="125"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="125" id="0x3-uJ-aLe"/>
+                                    <constraint firstAttribute="width" constant="244" id="C32-c8-Dri"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                 <color key="textColor" red="0.50196081399917603" green="0.25098040699958801" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gak-3x-GLk">
-                                <rect key="frame" x="13" y="326" width="280" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gak-3x-GLk">
+                                <rect key="frame" x="-43" y="423" width="261" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.70196080207824707" green="0.70196080207824707" blue="0.70196080207824707" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Predict">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="261" id="4Bx-ep-Tl8"/>
+                                    <constraint firstAttribute="height" constant="49" id="Cfn-6u-UQx"/>
+                                </constraints>
+                                <state key="normal" image="button-off">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <state key="highlighted" image="button-on"/>
                                 <connections>
                                     <action selector="buttonPressed" destination="vXZ-lx-hvc" eventType="touchUpInside" id="yPD-tf-cwr"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="caR-WR-20I" firstAttribute="centerX" secondItem="uDV-gh-tMq" secondAttribute="centerX" id="8SS-aH-pN8"/>
+                            <constraint firstAttribute="centerX" secondItem="Gak-3x-GLk" secondAttribute="centerX" id="93S-hl-Lmv"/>
+                            <constraint firstItem="7VW-bD-28d" firstAttribute="top" secondItem="uDV-gh-tMq" secondAttribute="bottom" id="Hg5-3r-Z99"/>
+                            <constraint firstItem="7VW-bD-28d" firstAttribute="top" secondItem="Gak-3x-GLk" secondAttribute="bottom" constant="8" id="Ij6-QQ-c5c"/>
+                            <constraint firstItem="caR-WR-20I" firstAttribute="centerY" secondItem="uDV-gh-tMq" secondAttribute="centerY" constant="-32.5" id="QP5-PE-0kG"/>
+                            <constraint firstItem="uDV-gh-tMq" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="ju4-Vb-S1B"/>
+                            <constraint firstItem="uDV-gh-tMq" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="mh9-YA-7wV"/>
+                            <constraint firstAttribute="trailing" secondItem="uDV-gh-tMq" secondAttribute="trailing" id="spV-De-Krg"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="predictionLabel" destination="caR-WR-20I" id="mcz-Zm-81Q"/>
@@ -45,27 +66,15 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="gdT-y3-nCh">
-            <objects>
-                <viewController id="lkX-Rb-jQo" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="kHe-zK-OvI"/>
-                        <viewControllerLayoutGuide type="bottom" id="6nk-xv-dmj"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="w4A-0y-zBy">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4Xm-1a-dpW" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-        </scene>
     </scenes>
+    <resources>
+        <image name="background" width="320" height="568"/>
+        <image name="button-off" width="261" height="49"/>
+        <image name="button-on" width="261" height="47"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
+        <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
 </document>

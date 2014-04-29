@@ -18,9 +18,9 @@
     // if it is nil, alloc and init a new prediction instance var
     if (_predictions == nil) {
         _predictions = [[NSArray alloc] initWithObjects:
-                        @"It is certain",
-                        @"It is decidedly certain",
-                        @"It is doubtful", nil];
+                        @"Who's birthday is it today?",
+                        @"It's not your birthday today, is it?",
+                        @"Who cares?", nil];
     }
     return _predictions;
 }

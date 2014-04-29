@@ -23,6 +23,20 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 
+// SHIFTED ALL INTERFACE CODE TO MAIN.STORYBOARD TO USE AUTOLAYOUT CONSTRAINTS
+//    // create image object and pass image object to initWithImage
+//    // UIImage class holds image data
+//    // use convenience constructor allocs and inits behind scenes and returns image object
+//    UIImage *backgroundImage = [UIImage imageNamed:@"background"];
+//    
+//    // insert UIImageView for background image object to be added to main view in storyboard
+//    UIImageView *imageView = [[UIImageView alloc] initWithImage:backgroundImage];
+//    
+//    // add view to View hierarchy and display it on the screen
+//    // self is instance of LSViewController. view is property of LSViewController
+//    // do not use addSubview as want it to be at back of all view layers
+//    //[self.view addSubview:imageView];
+//    [self.view insertSubview:imageView atIndex:0];
 }
 
 // method executes once the view appears after viewDidLoad
