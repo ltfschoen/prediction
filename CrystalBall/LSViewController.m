@@ -107,4 +107,25 @@
     self.predictionLabel.text = [self.crystalBall randomPrediction];
 
 }
+
+// implement grandfathered methods from UIResponder to respond to motion events
+
+- (void) motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event {
+    NSLog(@"motion began");
+    // reset prediction
+    self.predictionLabel.text = nil;
+}
+
+- (void) motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event {
+    // conditional to only display random prediciton if event is of type shake
+    NSLog(@"motion ended");
+    if (motion == UIEventSubtypeMotionShake) {
+        self.predictionLabel.text = [self.crystalBall randomPrediction];
+    }
+}
+
+- (void) motionCancelled:(UIEventSubtype)motion withEvent:(UIEvent *)event {
+    NSLog(@"");
+}
+
 @end
