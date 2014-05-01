@@ -109,6 +109,12 @@
 //
 //}
 
+# pragma mark -
+# pragma mark Make Prediction
+- (void) makePrediction {
+    self.predictionLabel.text = [self.crystalBall randomPrediction];
+}
+
 // implement grandfathered methods from UIResponder to respond to motion events
 
 #pragma mark -
@@ -126,7 +132,10 @@
     // conditional to only display random prediciton if event is of type shake
     NSLog(@"motion ended");
     if (motion == UIEventSubtypeMotionShake) {
-        self.predictionLabel.text = [self.crystalBall randomPrediction];
+        // REPLACED WITH CALLED TO MAKEPREDICTION METHOD
+//        self.predictionLabel.text = [self.crystalBall randomPrediction];
+        // send message to own instance method of the view controller to make a prediction
+        [self makePrediction];
     }
 }
 
@@ -144,7 +153,12 @@
 }
 
 - (void) touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
-    self.predictionLabel.text = [self.crystalBall randomPrediction];
+    // REPLACED WITH CALLED TO MAKEPREDICTION METHOD
+//    self.predictionLabel.text = [self.crystalBall randomPrediction];
+    // send message to own instance method of the view controller to make a prediction
+    [self makePrediction];
+    
+    
 }
 
 - (void) touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event {

@@ -28,4 +28,7 @@
 //// verify control connected in gutter
 //- (IBAction)buttonPressed;
 
+// relocated repetitive task to comply with DRY principle
+- (void) makePrediction;
+
 @end
