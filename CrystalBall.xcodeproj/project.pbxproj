@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A378A33B1912884A0059A4E6 /* crystal_ball.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A378A33A1912884A0059A4E6 /* crystal_ball.mp3 */; };
+		A378A33D191289890059A4E6 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A378A33C191289890059A4E6 /* AudioToolbox.framework */; };
 		A3AA0212190D2EF3003B3277 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3AA0211190D2EF3003B3277 /* Foundation.framework */; };
 		A3AA0214190D2EF3003B3277 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3AA0213190D2EF3003B3277 /* CoreGraphics.framework */; };
 		A3AA0216190D2EF3003B3277 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3AA0215190D2EF3003B3277 /* UIKit.framework */; };
@@ -35,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A378A33A1912884A0059A4E6 /* crystal_ball.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = crystal_ball.mp3; sourceTree = "<group>"; };
+		A378A33C191289890059A4E6 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		A3AA020E190D2EF3003B3277 /* CrystalBall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrystalBall.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3AA0211190D2EF3003B3277 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A3AA0213190D2EF3003B3277 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -63,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A378A33D191289890059A4E6 /* AudioToolbox.framework in Frameworks */,
 				A3AA0214190D2EF3003B3277 /* CoreGraphics.framework in Frameworks */,
 				A3AA0216190D2EF3003B3277 /* UIKit.framework in Frameworks */,
 				A3AA0212190D2EF3003B3277 /* Foundation.framework in Frameworks */,
@@ -104,6 +109,7 @@
 		A3AA0210190D2EF3003B3277 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A378A33C191289890059A4E6 /* AudioToolbox.framework */,
 				A3AA0211190D2EF3003B3277 /* Foundation.framework */,
 				A3AA0213190D2EF3003B3277 /* CoreGraphics.framework */,
 				A3AA0215190D2EF3003B3277 /* UIKit.framework */,
@@ -119,6 +125,7 @@
 				A3AA0226190D2EF3003B3277 /* LSViewController.h */,
 				A3AA0227190D2EF3003B3277 /* LSViewController.m */,
 				A3AA0229190D2EF3003B3277 /* Images.xcassets */,
+				A378A33A1912884A0059A4E6 /* crystal_ball.mp3 */,
 				A3AA0218190D2EF3003B3277 /* Supporting Files */,
 				A3AA0246190E0C58003B3277 /* LSCrystalBall.h */,
 				A3AA0247190E0C58003B3277 /* LSCrystalBall.m */,
@@ -236,6 +243,7 @@
 			files = (
 				A3AA022A190D2EF3003B3277 /* Images.xcassets in Resources */,
 				A3AA021C190D2EF3003B3277 /* InfoPlist.strings in Resources */,
+				A378A33B1912884A0059A4E6 /* crystal_ball.mp3 in Resources */,
 				A3AA0225190D2EF3003B3277 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -467,6 +475,7 @@
 				A3AA0242190D2EF3003B3277 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A3AA0243190D2EF3003B3277 /* Build configuration list for PBXNativeTarget "CrystalBallTests" */ = {
 			isa = XCConfigurationList;
@@ -475,6 +484,7 @@
 				A3AA0245190D2EF3003B3277 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

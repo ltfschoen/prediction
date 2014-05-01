@@ -11,16 +11,32 @@
 // import as only forward declaration used in header
 #import "LSCrystalBall.h"
 
+#import <AudioToolbox/AudioToolbox.h>
+
 @interface LSViewController ()
 
 @end
 
-@implementation LSViewController
+@implementation LSViewController {
+    // create instance variabel to refer to sound file of type system system sound id from the audio toolbox framework
+    SystemSoundID soundEffect; // typedef is UIInt32
+    
+}
 
 // loads frames from main.storyboard
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    // locate sound file manually from main bundle. gets directory path where file located
+    NSString *soundPath = [[NSBundle mainBundle] pathForResource:@"crystal_ball" ofType:@"mp3"];
+    
+    // we need url to paste into browser for audio location services. passing it the soundPath to generate a URL with path provided above
+    NSURL *soundURL = [NSURL fileURLWithPath:soundPath];
+    
+    // call C function (which requires use of CFBridgeRetain convenient helper method instead of just taking Objective-C object) to take sound URL object and store system sound ID into the soundEffect instance variable. as it is a C function and not passing it an object we need to pass it a reference to our pointer so it can modify the contents of the pointer (pass it by reference so it can modify the contents of soundEffect as it is not returning anything).
+    AudioServicesCreateSystemSoundID(CFBridgingRetain(soundURL), &soundEffect);
+    
 	// Do any additional setup after loading the view, typically from a nib.
 
 // SHIFTED ALL INTERFACE CODE TO MAIN.STORYBOARD TO USE AUTOLAYOUT CONSTRAINTS
@@ -183,6 +199,9 @@
     [self.backgroundImageView startAnimating];
     self.predictionLabel.text = [self.crystalBall randomPrediction];
     self.predictionLabel.alpha = 0.0f;
+    
+    // play the sound upon animation commencing by calling C function
+    AudioServicesPlaySystemSound(soundEffect);
     
     // use UIView animation helper methods
     // animateWithDuration is a Class method
