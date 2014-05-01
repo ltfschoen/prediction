@@ -110,6 +110,11 @@
 
 // implement grandfathered methods from UIResponder to respond to motion events
 
+#pragma mark -
+#pragma mark Responding to Shake Motion Events
+
+// test in simulator with Menu > Hardware > Shake Event
+
 - (void) motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event {
     NSLog(@"motion began");
     // reset prediction
@@ -126,6 +131,23 @@
 
 - (void) motionCancelled:(UIEventSubtype)motion withEvent:(UIEvent *)event {
     NSLog(@"");
+}
+
+#pragma mark -
+#pragma mark Responding to Touch Motion Events
+
+// test in simulator by clicking anywhere on iPhone screen
+
+- (void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    self.predictionLabel.text = nil;
+}
+
+- (void) touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
+    self.predictionLabel.text = [self.crystalBall randomPrediction];
+}
+
+- (void) touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event {
+    NSLog(@"touches cancelled");
 }
 
 @end
