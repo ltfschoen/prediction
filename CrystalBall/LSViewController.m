@@ -182,6 +182,17 @@
     // instruct image view to commence animating background image
     [self.backgroundImageView startAnimating];
     self.predictionLabel.text = [self.crystalBall randomPrediction];
+    self.predictionLabel.alpha = 0.0f;
+    
+    // use UIView animation helper methods
+    // animateWithDuration is a Class method
+    // text fade in after background animation (of 2.5 seconds) ends
+    // set to 6 seconds so performs fluidly
+    // pass it a Block of code ^{}
+    [UIView animateWithDuration:6.0 animations:^{
+        // increase alpha to 1.0 to establish animation for text over specified duration. transitions gradually from previously set alpha baseline value of 0
+        self.predictionLabel.alpha = 1.0f;
+    }];
 }
 
 // implement grandfathered methods from UIResponder to respond to motion events
@@ -219,6 +230,7 @@
 
 - (void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     self.predictionLabel.text = nil;
+    self.predictionLabel.alpha = 0.0f;
 }
 
 - (void) touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
