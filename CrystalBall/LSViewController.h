@@ -24,11 +24,15 @@
 // specify property name crystalBall so can use in implementation
 @property (strong, nonatomic) LSCrystalBall *crystalBall;
 
+// referencing outlet to animate background image view 
+@property (strong, nonatomic) IBOutlet UIImageView *backgroundImageView;
+
 // REMOVED BUTTON AS REPLACED WITH TOUCH EVENT
 //// verify control connected in gutter
 //- (IBAction)buttonPressed;
 
 // relocated repetitive task to comply with DRY principle
 - (void) makePrediction;
+
 
 @end
