@@ -24,7 +24,8 @@
 // specify property name crystalBall so can use in implementation
 @property (strong, nonatomic) LSCrystalBall *crystalBall;
 
-// verify control connected in gutter
-- (IBAction)buttonPressed;
+// REMOVED BUTTON AS REPLACED WITH TOUCH EVENT
+//// verify control connected in gutter
+//- (IBAction)buttonPressed;
 
 @end

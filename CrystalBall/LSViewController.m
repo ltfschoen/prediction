@@ -77,36 +77,37 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)buttonPressed {
-    
-    // create local random variable and assign length of array
-    // DELETE AS MOVED TO 'MODEL'
-    //int random = arc4random_uniform(self.predictions.count);
-    
-    // create variable called NSArray of predictions
-    // allocate in memory and init with data Strings
-    
-    // moved as declared 'predictions' @PROPERTY now so can access in all methods (i.e. viewDidAppear)
-//    NSArray *predictions = [[NSArray alloc] initWithObjects:@"It is certain", @"It is decidedly certain", @"It is doubtful", nil];
-    
-    //NSLog(@"button pressed"); // displays in console
-    
-    // self refers to UILabel instance of view controller.
-    // change text when pressed. use 'text' property
-    //self.predictionLabel.text = @"Yes";
-    
-    // use predictions array
-    // access elements in it
-    // send it message objectAtIndex
-    // so when click button it will set to index 0
-    // updated to refer to the property of predictions (not the instance variable itself, so change to 'self. '
-    // pass the generated random number
-    //REPLACE BELOW SINCE 'MODEL' CLASS CREATED FOR DATA
-    //self.predictionLabel.text = [self.predictions objectAtIndex:random];
-    // assign to crystalBall property and assign it to the randomPrediction message
-    self.predictionLabel.text = [self.crystalBall randomPrediction];
-
-}
+// REMOVED IMPLEMENTATION OF BUTTON AS REPLACED WITH TOUCH EVENT
+//- (IBAction)buttonPressed {
+//    
+//    // create local random variable and assign length of array
+//    // DELETE AS MOVED TO 'MODEL'
+//    //int random = arc4random_uniform(self.predictions.count);
+//    
+//    // create variable called NSArray of predictions
+//    // allocate in memory and init with data Strings
+//    
+//    // moved as declared 'predictions' @PROPERTY now so can access in all methods (i.e. viewDidAppear)
+////    NSArray *predictions = [[NSArray alloc] initWithObjects:@"It is certain", @"It is decidedly certain", @"It is doubtful", nil];
+//    
+//    //NSLog(@"button pressed"); // displays in console
+//    
+//    // self refers to UILabel instance of view controller.
+//    // change text when pressed. use 'text' property
+//    //self.predictionLabel.text = @"Yes";
+//    
+//    // use predictions array
+//    // access elements in it
+//    // send it message objectAtIndex
+//    // so when click button it will set to index 0
+//    // updated to refer to the property of predictions (not the instance variable itself, so change to 'self. '
+//    // pass the generated random number
+//    //REPLACE BELOW SINCE 'MODEL' CLASS CREATED FOR DATA
+//    //self.predictionLabel.text = [self.predictions objectAtIndex:random];
+//    // assign to crystalBall property and assign it to the randomPrediction message
+//    self.predictionLabel.text = [self.crystalBall randomPrediction];
+//
+//}
 
 // implement grandfathered methods from UIResponder to respond to motion events
 
